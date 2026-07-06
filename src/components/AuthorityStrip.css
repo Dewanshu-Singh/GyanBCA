@@ -1,0 +1,42 @@
+.authority-strip {
+  padding: 1.5rem 0;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.authority-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Marquee Animation */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee {
+  display: inline-flex;
+  gap: 4rem;
+  animation: marquee 20s linear infinite;
+}
+
+.company-logo-placeholder {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

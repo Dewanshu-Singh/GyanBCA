@@ -1,0 +1,235 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 6rem 0 4rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    align-items: flex-start;
+    padding-top: 7rem;
+  }
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(15, 74, 138, 0.75), rgba(15, 23, 42, 0.85)), url('/DSC01178.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: rgba(59, 130, 246, 0.3);
+  color: #bfdbfe;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.mb-4 { margin-bottom: 1rem; }
+.mt-2 { margin-top: 0.5rem; }
+
+.hero-title {
+  font-size: clamp(2.25rem, 8vw, 4rem);
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #93c5fd, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.btn-outline:hover {
+  background-color: #ffffff;
+  color: var(--primary-color);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.stat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.stat-icon {
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #cbd5e1;
+}
+
+/* Abstract Visual Styles */
+.hero-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.abstract-shape {
+  position: absolute;
+  border-radius: var(--radius-xl);
+  opacity: 0.6;
+  filter: blur(40px);
+  z-index: -1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+  top: 10%;
+  right: 10%;
+  width: 250px;
+  height: 250px;
+  background-color: var(--accent-color);
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  bottom: 10%;
+  left: 10%;
+  width: 300px;
+  height: 300px;
+  background-color: #3b82f6;
+  animation-delay: -3s;
+}
+
+.hero-form-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1023px) {
+  .hero-form-wrapper {
+    order: -1;
+  }
+}
+
+.hero-form-card {
+  background: var(--bg-card);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.hero-form-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.hero-admission-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hero-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hero-form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.hero-form-group input,
+.hero-form-group select {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: var(--bg-main);
+  transition: all var(--transition-fast);
+  text-overflow: ellipsis;
+}
+
+.hero-form-group input:focus,
+.hero-form-group select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background-color: white;
+}
+
+.hero-submit-btn {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+}

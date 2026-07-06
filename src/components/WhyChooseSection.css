@@ -1,0 +1,113 @@
+.why-choose-section {
+  background-color: var(--primary-color);
+  background-image: linear-gradient(rgba(15, 74, 138, 0.75), rgba(15, 23, 42, 0.85)), url('/DSC08540.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+  perspective: 1500px;
+}
+
+@media (min-width: 768px) {
+  .why-choose-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .why-choose-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.why-card {
+  position: relative;
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 10px 30px -10px rgba(15, 74, 138, 0.1);
+  transform-style: preserve-3d;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 5px solid var(--primary-color);
+}
+
+.why-card-inner {
+  transform-style: preserve-3d;
+  transform: translateZ(20px);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.why-card:hover {
+  transform: translateY(-15px) rotateX(10deg) rotateY(-5deg);
+  box-shadow: -15px 30px 40px -10px rgba(15, 74, 138, 0.25);
+  border-bottom: 5px solid var(--accent-color);
+  z-index: 10;
+}
+
+.why-card:hover .why-card-inner {
+  transform: translateZ(40px);
+}
+
+.why-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), #2563eb);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.why-card:hover .why-icon-wrapper {
+  transform: scale(1.15) rotate(10deg) translateZ(30px);
+  box-shadow: 0 15px 25px rgba(37, 99, 235, 0.4);
+}
+
+.why-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.why-points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.why-points-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.why-point-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
