@@ -40,6 +40,11 @@ html, body {
   width: 100%;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
