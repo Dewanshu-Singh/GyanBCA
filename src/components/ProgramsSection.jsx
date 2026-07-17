@@ -68,7 +68,7 @@ const ProgramsSection = () => {
                   </ul>
                 </div>
                 <div className="card-bottom">
-                  <a href="#admissions" className="btn btn-primary full-width">
+                  <a href="#admissions" className="btn btn-primary full-width hover-lift">
                     Apply Now <ArrowRight size={18} />
                   </a>
                 </div>

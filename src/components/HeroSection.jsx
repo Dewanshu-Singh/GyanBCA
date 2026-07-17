@@ -30,7 +30,7 @@ const HeroSection = () => {
           <div className="badge mb-4">Admissions Open 2026</div>
           <h1 className="hero-title">
             Shape Your Future at <br/>
-            <span className="text-gradient">Gyan Vihar University</span>
+            <span className="hero-text-gradient">Gyan Vihar University</span>
           </h1>
           <p className="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
             Join the premier institution for BCA & MCA programs in Jaipur. 
@@ -39,7 +39,7 @@ const HeroSection = () => {
           </p>
           
           <div className="hero-actions" data-aos="fade-up" data-aos-delay="200">
-            <a href="/Learning Centre of Excellence - google.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline hero-btn">
+            <a href="/Learning Centre of Excellence - google.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline hero-btn hover-lift">
               Download Brochure
             </a>
           </div>
@@ -126,7 +126,7 @@ const HeroSection = () => {
                 </select>
               </div>
 
-              <button type="submit" className="btn btn-primary submit-btn hero-submit-btn">
+              <button type="submit" className="btn btn-primary submit-btn hero-submit-btn hover-lift">
                 Apply Now <Send size={18} />
               </button>
             </form>

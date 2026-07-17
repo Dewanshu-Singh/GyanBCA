@@ -1,0 +1,108 @@
+.faq-section {
+  background-color: #ffffff;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.faq-wrapper {
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background-color: #f8fafc;
+  border-radius: var(--radius-md, 8px);
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.faq-item:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.faq-item.active {
+  background-color: #ffffff;
+  border-color: #94a3b8;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: var(--text-color, #1e293b);
+  font-size: 1.1rem;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color, #1e293b);
+  transition: transform 0.3s ease;
+}
+
+.faq-answer-wrapper {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.faq-answer {
+  margin-top: 1rem;
+  color: var(--text-muted, #64748b);
+  line-height: 1.6;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+}
+
+/* Admissions Banner matching the image */
+.admissions-banner {
+  background-color: #f1faee;
+  background: linear-gradient(90deg, #fdfdfd 0%, #ebf8f0 50%, #fdfdfd 100%);
+  padding: 1.5rem 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.banner-text {
+  color: #1e293b;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.apply-now-btn {
+  background-color: #8be0b7;
+  color: #032b21;
+  padding: 0.6rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.apply-now-btn:hover {
+  background-color: #72d0a1;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+}

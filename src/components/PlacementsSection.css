@@ -1,6 +1,7 @@
 .placements-section {
   background-color: #ffffff;
   position: relative;
+  padding-bottom: 3rem !important;
 }
 
 .placements-stats-bar {

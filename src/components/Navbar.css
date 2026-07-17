@@ -68,9 +68,10 @@
   width: 0;
   height: 2px;
   bottom: -4px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--accent-color);
-  transition: width var(--transition-normal);
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover {

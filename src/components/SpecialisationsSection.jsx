@@ -48,7 +48,7 @@ const SpecialisationsSection = () => {
 
   return (
     <section id="specialisations" className="section specs-section">
-      <div className="container">
+      <div className="container" style={{ maxWidth: '1500px' }}>
         
         <div className="text-center" data-aos="fade-up" style={{ marginBottom: '4rem' }}>
           <p className="section-subtitle" style={{ color: '#4285F4', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '0.5rem' }}>
