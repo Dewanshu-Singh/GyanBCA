@@ -33,14 +33,20 @@ const HeroSection = () => {
             
             <div className="banner-grid">
               <div className="banner-image-wrapper">
-                <img src="/scholarship-creative.webp" alt="Scholarship Banner" className="banner-creative-img" />
+                <img src="/img1.webp" alt="Campus Life and Scholarship" className="banner-creative-img" />
                 <div className="banner-image-overlay"></div>
               </div>
               
               <div className="banner-text-content">
-                <div className="banner-badge">Limited Time Offer</div>
-                <h2>🎓 Upto 100% Scholarship is Available!</h2>
-                <p>Unlock your potential at Gyan Vihar University. Don't miss this opportunity to accelerate your career with our exclusive scholarship programs.</p>
+                <div className="banner-badge">Admissions Open 2026-27</div>
+                <h2>🎓 Secure Your Future!</h2>
+                <ul className="banner-features">
+                  <li>✨ Upto 100% Merit Scholarships</li>
+                  <li>💼 Excellent Placement Record</li>
+                  <li>🌐 Industry-Aligned Curriculum</li>
+                  <li>🏢 State-of-the-Art Labs & Infrastructure</li>
+                </ul>
+                <p>Join Gyan Vihar University and unlock exclusive scholarship opportunities for BCA & MCA programs.</p>
                 <button className="btn btn-accent banner-btn" onClick={() => {
                   setShowBanner(false);
                   document.getElementById('admissions')?.scrollIntoView({ behavior: 'smooth' });

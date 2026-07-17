@@ -392,16 +392,34 @@
 
 .banner-text-content h2 {
   font-size: 1.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: #ffffff;
   line-height: 1.2;
 }
 
+.banner-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.banner-features li {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .banner-text-content p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
   color: #cbd5e1;
-  line-height: 1.5;
+  line-height: 1.4;
+  font-style: italic;
 }
 
 .banner-btn {
