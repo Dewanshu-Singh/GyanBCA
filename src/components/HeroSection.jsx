@@ -28,16 +28,27 @@ const HeroSection = () => {
 
       {showBanner && (
         <div className="banner-overlay">
-          <div className="banner-content glass-dark animate-fade-up">
+          <div className="banner-content animate-fade-up">
             <button className="banner-close" onClick={() => setShowBanner(false)}>×</button>
-            <h2>🎓 Upto 100% Scholarship is Available!</h2>
-            <p>Don't miss this opportunity to accelerate your career.</p>
-            <button className="btn btn-accent banner-btn" onClick={() => {
-              setShowBanner(false);
-              document.getElementById('admissions')?.scrollIntoView({ behavior: 'smooth' });
-            }}>
-              Apply Now
-            </button>
+            
+            <div className="banner-grid">
+              <div className="banner-image-wrapper">
+                <img src="/scholarship-creative.webp" alt="Scholarship Banner" className="banner-creative-img" />
+                <div className="banner-image-overlay"></div>
+              </div>
+              
+              <div className="banner-text-content">
+                <div className="banner-badge">Limited Time Offer</div>
+                <h2>🎓 Upto 100% Scholarship is Available!</h2>
+                <p>Unlock your potential at Gyan Vihar University. Don't miss this opportunity to accelerate your career with our exclusive scholarship programs.</p>
+                <button className="btn btn-accent banner-btn" onClick={() => {
+                  setShowBanner(false);
+                  document.getElementById('admissions')?.scrollIntoView({ behavior: 'smooth' });
+                }}>
+                  Apply Now For 2026
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}
