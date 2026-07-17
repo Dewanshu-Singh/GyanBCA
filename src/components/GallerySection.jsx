@@ -11,16 +11,16 @@ import './GallerySection.css';
 
 const GallerySection = () => {
   const campusImages = [
-    '/DSC01178.png',
-    '/DSC08273.png',
-    '/DSC08273 (1).png',
-    '/DSC08521.jpg',
-    '/new5.jpg',
-    '/new6.jpg',
-    '/new9.JPG',
-    '/DSC02917.JPG',
-    '/DSC02968.JPG',
-    '/for poster (1).jpg'
+    '/hero-bg-compressed.webp',
+    '/DSC08273.webp',
+    '/1-compressed.webp',
+    '/DSC08521.webp',
+    '/new5.webp',
+    '/new6.webp',
+    '/new9.webp',
+    '/DSC02917.webp',
+    '/DSC02968.webp',
+    '/for-poster.webp'
   ];
 
   return (

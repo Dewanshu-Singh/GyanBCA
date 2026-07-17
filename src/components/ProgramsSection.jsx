@@ -8,7 +8,7 @@ const ProgramsSection = () => {
       title: 'BCA (Bachelor of Computer Applications)',
       duration: '3 Years',
       eligibility: '10+2 with minimum 50%',
-      image: '/DSC08521.jpg',
+      image: '/DSC08521.webp',
       icon: <Monitor size={32} />,
       features: [
         'Foundation in Computer Science',

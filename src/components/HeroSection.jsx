@@ -9,6 +9,7 @@ const HeroSection = () => {
     phone: '',
     program: 'BCA',
   });
+  const [showBanner, setShowBanner] = useState(true);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,6 +25,22 @@ const HeroSection = () => {
     <section id="home" className="hero">
       {/* Background with gradient and subtle texture */}
       <div className="hero-bg"></div>
+
+      {showBanner && (
+        <div className="banner-overlay">
+          <div className="banner-content glass-dark animate-fade-up">
+            <button className="banner-close" onClick={() => setShowBanner(false)}>×</button>
+            <h2>🎓 Upto 100% Scholarship is Available!</h2>
+            <p>Don't miss this opportunity to accelerate your career.</p>
+            <button className="btn btn-accent banner-btn" onClick={() => {
+              setShowBanner(false);
+              document.getElementById('admissions')?.scrollIntoView({ behavior: 'smooth' });
+            }}>
+              Apply Now
+            </button>
+          </div>
+        </div>
+      )}
       
       <div className="container hero-container">
         <div className="hero-content" data-aos="fade-up">

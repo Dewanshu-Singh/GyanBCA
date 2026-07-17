@@ -35,7 +35,7 @@ const AdmissionForm = () => {
             </div>
             
             <div className="admission-image-card">
-              <img src="/new5.jpg" alt="Campus Students" className="admission-image" />
+              <img src="/new5.webp" alt="Campus Students" className="admission-image" />
               <div className="contact-info-overlay glass">
                 <div className="info-item">
                   <strong>Email:</strong> admissions@gyanvihar.org
