@@ -22,11 +22,17 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`navbar glass ${isScrolled ? 'shadow-md' : ''}`}>
+    <nav className={`navbar ${isScrolled ? 'shadow-md' : ''}`}>
       <div className="container navbar-container">
-        <a href="#home" className="logo">
-          <img src="/sgvu-logo.png" alt="Gyan Vihar University Logo" className="navbar-logo-img" />
-        </a>
+        <div className="navbar-brand">
+          <a href="#home" className="logo">
+            <img src="/sgvu-logo.png" alt="Gyan Vihar University Logo" className="navbar-logo-img" />
+          </a>
+          <div className="navbar-extra-logos">
+            <img src="/naac-logo.png" alt="NAAC A++" className="navbar-extra-img" />
+            <img src="/nirf-logo.png" alt="NIRF" className="navbar-extra-img" />
+          </div>
+        </div>
 
         {/* Desktop Nav */}
         <div className="nav-links">

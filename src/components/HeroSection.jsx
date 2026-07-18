@@ -28,32 +28,20 @@ const HeroSection = () => {
 
       {showBanner && (
         <div className="banner-overlay">
-          <div className="banner-content animate-fade-up">
+          <div className="banner-content square-banner animate-fade-up">
             <button className="banner-close" onClick={() => setShowBanner(false)}>×</button>
             
-            <div className="banner-grid">
-              <div className="banner-image-wrapper">
-                <img src="/img1.webp" alt="Campus Life and Scholarship" className="banner-creative-img" />
-                <div className="banner-image-overlay"></div>
-              </div>
-              
-              <div className="banner-text-content">
-                <div className="banner-badge">Admissions Open 2026-27</div>
-                <h2>🎓 Secure Your Future!</h2>
-                <ul className="banner-features">
-                  <li>✨ Upto 100% Merit Scholarships</li>
-                  <li>💼 Excellent Placement Record</li>
-                  <li>🌐 Industry-Aligned Curriculum</li>
-                  <li>🏢 State-of-the-Art Labs & Infrastructure</li>
-                </ul>
-                <p>Join Gyan Vihar University and unlock exclusive scholarship opportunities for BCA & MCA programs.</p>
-                <button className="btn btn-accent banner-btn" onClick={() => {
-                  setShowBanner(false);
-                  document.getElementById('admissions')?.scrollIntoView({ behavior: 'smooth' });
-                }}>
-                  Apply Now For 2026
-                </button>
-              </div>
+            <div className="square-banner-img-container">
+              <img src="/web-banner.webp" alt="Special Offer Banner" className="clear-banner-img" />
+            </div>
+            
+            <div className="square-banner-footer">
+              <button className="btn btn-accent banner-btn" onClick={() => {
+                setShowBanner(false);
+                document.getElementById('admissions')?.scrollIntoView({ behavior: 'smooth' });
+              }}>
+                Apply Now
+              </button>
             </div>
           </div>
         </div>
@@ -63,44 +51,17 @@ const HeroSection = () => {
         <div className="hero-content" data-aos="fade-up">
           <div className="badge mb-4">Admissions Open 2026</div>
           <h1 className="hero-title">
-            Shape Your Future at <br/>
+            Premier BCA & MCA Programs at <br/>
             <span className="hero-text-gradient">Gyan Vihar University</span>
           </h1>
-          <p className="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
-            Join the premier institution for BCA & MCA programs in Jaipur. 
-            Experience world-class education, cutting-edge facilities, and 
-            outstanding placement opportunities.
-          </p>
+
           
           <div className="hero-actions" data-aos="fade-up" data-aos-delay="200">
-            <a href="/Learning Centre of Excellence - google.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline hero-btn hover-lift">
+            <a href="/Learning Centre of Excellence - google.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary hero-btn hover-lift">
               Download Brochure
             </a>
           </div>
 
-          <div className="hero-stats" data-aos="fade-up" data-aos-delay="300">
-            <div className="stat-item">
-              <Users className="stat-icon" />
-              <div>
-                <h4 className="stat-number">10k+</h4>
-                <p className="stat-label">Alumni Network</p>
-              </div>
-            </div>
-            <div className="stat-item">
-              <Trophy className="stat-icon" />
-              <div>
-                <h4 className="stat-number">A++</h4>
-                <p className="stat-label">NAAC Accredited</p>
-              </div>
-            </div>
-            <div className="stat-item">
-              <BookOpen className="stat-icon" />
-              <div>
-                <h4 className="stat-number">95%</h4>
-                <p className="stat-label">Placement Rate</p>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div id="admissions" className="hero-form-wrapper" data-aos="fade-up" data-aos-delay="400">

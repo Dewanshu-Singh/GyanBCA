@@ -6,13 +6,17 @@
   padding: 6rem 0 4rem;
   overflow: hidden;
   z-index: 1;
+  background-color: #e0f2fe;
 }
 
 @media (max-width: 768px) {
   .hero {
     height: auto;
     align-items: flex-start;
-    padding-top: 7rem;
+    padding-top: 6rem;
+  }
+  .hero-container {
+    gap: 2rem;
   }
 }
 
@@ -22,9 +26,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(15, 74, 138, 0.85), rgba(15, 23, 42, 0.9)), url('/hero-bg-compressed.webp');
+  background: url('/whatsapp-hero.jpeg');
   background-size: cover;
   background-position: center;
+  opacity: 0.7;
   z-index: -1;
   animation: bg-pan 15s infinite alternate ease-in-out;
 }
@@ -35,13 +40,7 @@
 }
 
 .hero-bg::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at center, transparent 0%, rgba(15,23,42,0.8) 100%);
+  display: none;
 }
 
 .hero-container {
@@ -60,8 +59,8 @@
 .badge {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: rgba(59, 130, 246, 0.3);
-  color: #bfdbfe;
+  background-color: rgba(59, 130, 246, 0.4);
+  color: #ffffff;
   border-radius: var(--radius-full);
   font-weight: 600;
   font-size: 0.875rem;
@@ -78,23 +77,21 @@
 .mt-2 { margin-top: 0.5rem; }
 
 .hero-title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1.5rem;
   color: #ffffff;
   line-height: 1.1;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-text-gradient {
-  background: linear-gradient(to right, #93c5fd, #3b82f6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #e2e8f0;
+  color: #475569;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -108,13 +105,13 @@
 
 .btn-outline {
   background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 
 .btn-outline:hover {
-  background-color: #ffffff;
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .hero-stats {
@@ -122,7 +119,7 @@
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1.5rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .stat-item {
@@ -143,13 +140,14 @@
 
 .stat-number {
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #1e293b;
   margin-bottom: 0.25rem;
+  font-weight: 700;
 }
 
 .stat-label {
   font-size: 0.875rem;
-  color: #cbd5e1;
+  color: #475569;
 }
 
 /* Abstract Visual Styles */
@@ -289,8 +287,6 @@
 
 .banner-content {
   position: relative;
-  max-width: 800px;
-  width: 95%;
   background: var(--bg-card);
   border-radius: var(--radius-xl);
   overflow: hidden;
@@ -299,83 +295,51 @@
   border: 1px solid rgba(255,255,255,0.2);
 }
 
-.banner-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 768px) {
-  .banner-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.banner-image-wrapper {
-  position: relative;
-  height: 200px;
+.square-banner {
+  max-width: 350px !important;
+  width: 90% !important;
+  display: flex;
+  flex-direction: column;
+  background: white !important;
+  border-radius: var(--radius-xl);
   overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-@media (min-width: 768px) {
-  .banner-image-wrapper {
-    height: 100%;
-  }
+.square-banner-img-container {
+  width: 100%;
+  overflow: hidden;
+  background: #f1f5f9;
 }
 
-.banner-creative-img {
+.clear-banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 3s ease;
+  transition: transform 0.5s ease;
 }
 
-.banner-content:hover .banner-creative-img {
-  transform: scale(1.05);
+.square-banner:hover .clear-banner-img {
+  transform: scale(1.03);
 }
 
-.banner-image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.2));
-}
-
-.banner-text-content {
-  padding: 2.5rem 2rem;
+.square-banner-footer {
+  padding: 1.25rem 1rem;
+  background: white;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  background: rgba(15, 74, 138, 0.95);
-  color: white;
-}
-
-.banner-badge {
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-  background-color: rgba(251, 191, 36, 0.2);
-  color: #fcd34d;
-  border-radius: var(--radius-full);
-  font-weight: 600;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
 }
 
 .banner-close {
   position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  background: rgba(0,0,0,0.5);
-  color: white;
-  width: 32px;
-  height: 32px;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0,0,0,0.05);
+  color: #333;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -386,51 +350,24 @@
 }
 
 .banner-close:hover {
-  background: var(--accent-color);
-  transform: rotate(90deg);
-}
-
-.banner-text-content h2 {
-  font-size: 1.75rem;
-  margin-bottom: 0.75rem;
-  color: #ffffff;
-  line-height: 1.2;
-}
-
-.banner-features {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.25rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.banner-features li {
-  font-size: 0.95rem;
-  color: #e2e8f0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.banner-text-content p {
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-  color: #cbd5e1;
-  line-height: 1.4;
-  font-style: italic;
+  background: rgba(0,0,0,0.1);
 }
 
 .banner-btn {
   font-size: 1rem;
-  padding: 1rem 2rem;
+  padding: 0.875rem 2rem;
   width: 100%;
   background: linear-gradient(135deg, #3b82f6, #2563eb);
   border: none;
+  border-radius: var(--radius-full);
   box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .banner-btn:hover {
+  transform: translateY(-2px);
   box-shadow: 0 15px 25px -5px rgba(37, 99, 235, 0.5);
 }

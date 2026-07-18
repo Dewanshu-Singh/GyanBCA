@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaYoutube, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -18,10 +18,10 @@ const Footer = () => {
               India's first Google-powered tech degree — where your BCA isn't just a certificate, it's a career launchpad.
             </p>
             <div className="social-links">
-              <a href="#" className="social-link"><FaFacebook size={20} /></a>
-              <a href="#" className="social-link"><FaTwitter size={20} /></a>
-              <a href="#" className="social-link"><FaInstagram size={20} /></a>
-              <a href="#" className="social-link"><FaLinkedin size={20} /></a>
+              <a href="https://www.instagram.com/sureshgyanvihar.university?igsh=Z3lmYzlqbTJjOWo0" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram"><FaInstagram size={20} /></a>
+              <a href="https://www.facebook.com/share/1C4Cf1TkNF/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook"><FaFacebook size={20} /></a>
+              <a href="https://www.linkedin.com/school/sgvu/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn"><FaLinkedin size={20} /></a>
+              <a href="https://www.youtube.com/@SGVUYoutube" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Youtube"><FaYoutube size={20} /></a>
             </div>
           </div>
 

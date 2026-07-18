@@ -35,7 +35,7 @@
 .company-logo-placeholder {
   font-size: 1.25rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(15, 74, 138, 0.5); /* Deep Academic Blue with opacity */
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: all 0.3s ease;
@@ -43,9 +43,19 @@
 }
 
 .company-logo-placeholder:hover {
-  color: #fff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(15, 74, 138, 0.2);
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .marquee {
+    gap: 2rem;
+  }
+  
+  .company-logo-placeholder {
+    font-size: 1rem;
+  }
 }
 
 @keyframes marquee {

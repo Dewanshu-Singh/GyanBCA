@@ -1,6 +1,6 @@
 .specs-section {
   background-color: #0f172a;
-  background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('/DSC08521.webp');
+  background-image: linear-gradient(rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.3)), url('/DSC08521.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -11,11 +11,13 @@
 
 .specs-section .section-title {
   color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
 
 .specs-lead {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
   max-width: 700px;
   margin: 0 auto;
 }
@@ -35,7 +37,7 @@
 
 @media (min-width: 1024px) {
   .specs-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

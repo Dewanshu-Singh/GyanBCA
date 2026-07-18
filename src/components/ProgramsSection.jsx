@@ -21,7 +21,7 @@ const ProgramsSection = () => {
       title: 'MCA (Masters in Computer Application)',
       duration: '2 Years',
       eligibility: 'Graduation with minimum 50%',
-      image: '/DSC08273 (1).png',
+      image: '/DSC08273.webp',
       icon: <Server size={32} />,
       features: [
         'The Ultimate Tech Credential',
