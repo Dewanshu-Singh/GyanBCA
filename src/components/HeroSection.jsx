@@ -51,7 +51,7 @@ const HeroSection = () => {
         <div className="hero-content" data-aos="fade-up">
           <div className="badge mb-4">Admissions Open 2026</div>
           <h1 className="hero-title">
-            Premier BCA & MCA Programs at <br/>
+            BCA & MCA Programs at <br/>
             <span className="hero-text-gradient">Gyan Vihar University</span>
           </h1>
 
